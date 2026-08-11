@@ -10,10 +10,10 @@ jobs:
 
     steps:
       - name: Checkout do código
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Configurar JDK 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           java-version: '17'
           distribution: 'temurin'
@@ -21,6 +21,3 @@ jobs:
 
       - name: Build e testes
         run: mvn -B clean verify
-
-      - name: Atualizar dependency graph
-        uses: advanced-security/maven-dependency-submission-action@v4
